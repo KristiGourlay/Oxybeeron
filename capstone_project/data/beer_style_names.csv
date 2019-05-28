@@ -1,0 +1,338 @@
+,beer,style_name
+0,Beau's All Natural Brewing Company: Beau's Lugtread,kolsch
+1,Grupo Modelo: Corona,lager
+2,Coors Brewing Company: Coors Light,lager
+3,Heineken: Heineken Lager,lager
+4,Brasserie Dieu De Ciel!: Peche Mortel,imperial st
+5,"Brouwerij Rodenbach: Rodenbach Grand Cru,",sour
+6,Brasserie D'Achouffe: La Chouffe,belgian
+7,Side Launch Brewing Company: Side Launch Wheat,wheat
+8,Sierra Nevada Brewing Co.: Pale Ale,pale ale
+9,Sawdust City Brewing Co.: Little Norway,lager
+10,Sawdust City Brewing Co.: Skinny Dippin' Stout,stout
+11,Sawdust City Brewing Co.: Long Dark Voyage to Uranus,imperial st
+12,Sawdust City Brewing Co.: Lone Pine,ipa
+13,Sawdust City Brewing Co.: Golden Beach,ipa
+14,Sawdust City Brewing Co.: Gateway Kolsch,kolsch
+15,Sawdust City Brewing Co.: Juicin,ipa
+16,Sawdust City Brewing Co.: Princess Wears Girl Pants,belgian
+17,Redline Brewhouse: Clutch,pale ale
+18,Guiness: Guinness,stout
+19,Blue Moon Brewing Company: Blue Moon,wheat
+20,Mill Street Brewery: Original Organic,lager
+21,Alexander Keiths: Red Amber Ale,"red, amber"
+22,Woodhouse Brewing Co.: Woodhouse Lager,lager
+23,Brouwerij Artois: Stella Artois,pilsner
+24,Brewery Ommegang: Ommegang Pale Sour,sour
+25,The Collingwood Brewery: Rockwell,pilsner
+26,McAuslan Brewing: St. Ambroise Oatmeal Stout,stout
+27,Rainhard Brewing Co.: Armed N' Citra,pale ale
+28,Rainhard Brewing Co.: Kapow! IPA,ipa
+29,High Road Brewing: Cloud Piercer,pale ale
+30,A l'abri de la Tempête: Corne de Brume,Scottish-Style Light Ale
+31,Ace Hill Brewing Company: Ace Hill Pilsner,pilsner
+32,Amsterdam Brewing: Amsterdam Barrel Aged Double Tempest,imperial st
+33,Amsterdam Brewing: Amsterdam / Great Lakes Life Sentence,ipa
+34,Amsterdam Brewing: Amsterdam Tempest Imperial Stout,imperial st
+35,Amsterdam Brewing Company: Howl,belgian
+36,Amsterdam Brewing Company: (416) Local Lager,lager
+37,Amsterdam Brewing Company: All Natural Blonde,lager
+38,Amsterdam Brewing Company: Fracture Imperial IPA,pale ale
+39,Amsterdam Brewing Company: Downtown Brown,browns
+40,Amsterdam Brewing Company: Cruiser All Day Pale Ale,Golden or Blonde Ale
+41,Amsterdam Brewing Company: Boneshaker,pale ale
+42,Amsterdam Brewing Company: Autumn Hop,ipa
+43,Amsterdam Brewing Company: Framboise,fruit beer
+44,Amsterdam Brewing Company: Big Wheel Deluxe Amber,"red, amber"
+45,Amsterdam Brewing Company: 3 Speed,lager
+46,Barnstormer Brewing & Distilling Co.: Fight Delay,pale ale
+47,Beau's All Natural Brewing: The Bottle Imp,imperial st
+48,Beau's All Natural Brewing: Wild Oats Series No. 60 - Le Coeur Noir,black ale
+49,Beau's All Natural Brewing: One Ping Only,browns
+50,Beaus All Natural Brewing Company: Golden Vox (Wild Oats Series No. 53),lager
+51,Beaus All Natural Brewing Company: Full Time IPA,pale ale
+52,Beaus All Natural Brewing Company: Dark Helmüt,Strong Ale
+53,Beaus All Natural Brewing Company: Festivale,germanic styles
+54,Beaus All Natural Brewing Company: Beaver River I.P.Eh?,pale ale
+55,Beaus All Natural Brewing Company: Cherry Revue,sour
+56,Beaus All Natural Brewing Company: Blood Simple,wheat
+57,Beaus All Natural Brewing Company: Bog Water,belgian
+58,Bellwoods Brewery: Cat Lady IPA,pale ale
+59,Bellwoods Brewery: Lost River Baltic Porter,browns
+60,Bellwoods Brewery: Bring Out Your Dead,imperial st
+61,Bellwoods Brewery: Monogamy - Galaxy,pale ale
+62,Bellwoods Brewery: Skeleton Key - Coffee,imperial st
+63,Bellwoods Brewery: Boogie Monster,pale ale
+64,Bellwoods Brewery: Farmageddon,belgian
+65,Bellwoods Brewery: Monogamy - Mosaic,pale ale
+66,Bellwoods Brewery: Skeleton Key - Coconut,imperial st
+67,Bellwoods Brewery: Catherine Wheel,pale ale
+68,Bellwoods Brewery: Monogamy - Citra,pale ale
+69,Bellwoods Brewery: Milkshark - Guava,ipa
+70,Bellwoods Brewery: White Picket Fence,belgian
+71,Bellwoods Brewery: Ghost Orchid,ipa
+72,Bellwoods Brewery: Jelly King - Pink Guava,sour
+73,Bellwoods Brewery: Double Jutsu,ipa
+74,Bellwoods Brewery: Roman Candle,ipa
+75,Bellwoods Brewery: Milkshark - Pineapple,ipa
+76,Bellwoods Brewery: Monogamy - Nelson Sauvin,pale ale
+77,Bellwoods Brewery: Jelly King,sour
+78,Bellwoods Brewery: Witchshark,ipa
+80,Bellwoods Brewery: Hellwoods,imperial st
+81,Bellwoods Brewery: Cat Lady - Double Dry-Hopped,ipa
+82,Bellwoods Brewery: Jutsu,pale ale
+83,Bellwoods Brewery: Farmageddon - Niagara Montmorency Cherry,belgian
+84,Bellwoods Brewery: 3 Minutes To Midnight,imperial st
+85,Bellwoods Brewery: Grandma's Boy,belgian
+86,Bellwoods Brewery: Skeleton Key,imperial st
+87,Bellwoods Brewery: Donkey Venom,barrelaged
+88,Bench Brewing Company: Ball's Falls Session IPA,pale ale
+89,Beyond the Pale Brewing: Saison Tropicale,belgian
+90,Big Rig Brewery: Gold Lagered Ale,Golden or Blonde Ale
+91,Big Rig Brewery: Disturber,pale ale
+92,Big Rig Brewery: Alpha Bomb,pale ale
+93,Black Oak Brewing: Black Oak Ten Bitter Years,ipa
+94,Black Oak Brewing Company: Double Chocolate Cherry Stout,stout
+95,Black Oak Brewing Company: Beat The Heat,wheat
+96,Brasserie Dieu du Ciel!: 6e Soir,pilsner
+97,Brasserie Dieu du Ciel!: Equinoxe du Printemps,barrelaged
+98,Brasserie Dieu du Ciel!: Grande Noirceur,imperial st
+99,Brasserie Dieu du Ciel!: Disco Soleil,pale ale
+100,Brasserie Dieu du Ciel!: Dernière Volonté Réserve Spéciale En Fût De Pinot Noir,belgian
+101,Brasserie Dieu du Ciel!: Herbe à détourne,belgian
+102,Brasserie Dieu du Ciel!: Dernière Volonté,belgian
+103,Brasserie Dieu du Ciel!: Immoralité,pale ale
+104,Brasserie Dieu du Ciel!: Chemin de Croix,browns
+105,Brasserie Dieu du Ciel!: Blanche du Paradis,wheat
+106,Brasserie Dieu du Ciel!: Blanche Neige,wheat
+107,Brasserie Dieu du Ciel!: Aphrodite,stout
+108,Brasserie Dieu du Ciel!: Corne du diable,pale ale
+109,Brasserie Dieu du Ciel!: Isseki Nicho,belgian
+110,Brasserie Dunham: Dunham Stout Impériale Russe Bourbon,imperial st
+111,Brasserie Dunham: Berliner Mango Weisse,wheat
+112,Brasserie Dunham: Berliner Melon Weisse,wheat
+113,Brasserie Dunham: IPA Belge,belgian
+114,Brasserie Dunham: Imperial Black IPA,pale ale
+115,Brasserie Dunham: Assemblage #9,belgian
+116,Brasserie Dunham: Cyclope Alpha IPA,pale ale
+117,Brasserie Les 2 Frères: Hickson IPA,Strong Ale
+118,Brasserie Les 2 Frères: Hickson Imperiale IPA,Strong Ale
+119,Brasserie Les 2 Frères: Charles Henri Ambrée,"red, amber"
+120,Brasserie Les 2 Frères: Charles Henri White,wheat
+121,Brasseurs du Monde: 5 Anniversaire,belgian
+122,Brewery Ommegang: Duvel Rustica,belgian
+123,Brewery Ommegang: Chocolate Indulgence,stout
+124,Brewery Ommegang: Brut IPA,pale ale
+125,Brewery Ommegang: Hennepin,belgian
+126,Brewery Ommegang: Bourbon Barrel Adoration,barrelaged
+127,Brewery Ommegang: Bourbon Barrel Aged Three Philosophers,belgian
+128,Brewery Ommegang: Gnomegeddon,belgian
+129,Brickworks Ciderhouse: Batch: 1904,cider
+130,Broadhead Brewing Co: Dark Horse Stout,stout
+131,Brooklyn Brewery: Bel Air Sour,sour
+132,Brooklyn Brewery: Gold Standard Export Kellerbier,Dortmunder / European-Style Export
+133,Brooklyn Brewery: Insulated Lager,lager
+134,Brooklyn Brewery: Defender IPA,pale ale
+135,Brooklyn Brewery: Hopfen-Weisse,wheat
+136,Brooklyn Brewery: Brooklyn Brown Ale,browns
+137,Brooklyn Brewery: Brooklyn Dry Irish Stout,stout
+138,Brooklyn Brewery: Brooklyn East India Pale Ale,pale ale
+139,Brooklyn Brewery: Brooklyn Lager,lager
+140,Brooklyn Brewery: Brooklyn Local 1,belgian
+141,Brooklyn Brewery: Brooklyn BAMBoozle,Specialty Beer
+142,Brooklyn Brewery: Brooklyn Oktoberfest,germanic styles
+143,Brooklyn Brewery: Brooklyn Pennant Ale,browns
+144,Brooklyn Brewery: Brooklyn Summer Ale,pale ale
+145,Brooklyn Brewery: Brooklyn Winter Lager,germanic styles
+146,Brooklyn Brewery: Brooklyn Pilsner,pilsner
+147,Brooklyn Brewery: Brooklyn Winter Ale,Scottish-Style Light Ale
+148,Broue Pub Brouhaha: Choco-Framboise Brett,sour
+149,Cameron's Brewing: Cosmic Cream Ale,lager
+150,Cameron's Brewing: Auburn Ale,"red, amber"
+151,Cameron's Brewing: Dark & Sticky,pale ale
+152,Cameron's Brewing: RPA (Rye Pale Ale),barrelaged
+153,Cidre McKeown: Cidre Au Sumac,cider
+154,Cidrerie Milton: CID Cuivré,cider
+155,Clifford Brewing Co.: Clifford Porter,browns
+156,Collective Arts Brewing: Basil & Cranberry,sour
+157,Collective Arts Brewing: Rhyme & Reason,pale ale
+158,Collective Arts Brewing: Collective Project: Sour Dry Hopped with Raspberry,sour
+159,Collective Arts Brewing: Collective Project: Sour Dry Hop Ale - Passion Fruit And Peach,sour
+160,Collective Arts Brewing: Collective Arts / Forbidden Root - Origin of Darkness,imperial st
+161,Collective Arts Brewing: Stranger Than Fiction,browns
+162,Collective Arts Brewing: IPA No. 1,pale ale
+163,Collective Arts Brewing: Dark Fruit Gose,sour
+164,Collective Arts Brewing: Imperial Porter Bourbon Barrel-Aged 2018 Release,browns
+165,Collective Arts Brewing: Radio The Mothership,ipa
+166,Collective Arts Brewing: Collective Project: IPA No. 8,ipa
+167,Collective Arts Brewing: Collective Project: IPA No. 7,ipa
+168,Collective Arts Brewing: Jam up the Mash,sour
+169,Collective Arts Brewing: Barrel Aged Imperial Porter,browns
+170,Collective Arts Brewing: Ransack the Universe - Hemisphere IPA,ipa
+171,Collective Arts Brewing: Life in the Clouds,ipa
+172,Collective Arts Brewing: Collective Arts / Donut Monster - Origin of Darkness,imperial st
+173,Collective Arts Brewing: Filling the Void,cider
+174,Collective Arts Brewing: Collective Project: Guava Gose,sour
+175,Collective Arts Brewing: Collective Project: Dry Hop Sour,sour
+176,Cowbell Brewing Company: Doc Perdue's Boxing Bruin,pale ale
+177,Cowbell Brewing Company: Absent Landlord,kolsch
+178,Creemore Spring Brewery: Creemore Springs Traditional Pilsner,pilsner
+179,Creemore Spring Brewery: Creemore Springs Premium Lager,lager
+180,Creemore Spring Brewery: Creemore Springs Kellerbier,Specialty Beer
+181,Dominion City Brewing: Sunsplit IPA,ipa
+182,Double Trouble Brewing Co.: Hops and Robbers,pale ale
+183,Double Trouble Brewing Co.: Fire in the Rye,lager
+184,Flying Monkeys Craft Brewery: Flying Monkeys Paranormal Imperial Pumpkin Ale, Pumpkin Beer 
+185,Flying Monkeys Craft Brewery: 12 Minutes to Destiny,lager
+186,Flying Monkeys Craft Brewery: Hoptical Illusion,pale ale
+187,Flying Monkeys Craft Brewery: Flying Monkeys The Chocolate Manifesto,stout
+188,Flying Monkeys Craft Brewery: Basilisk,belgian
+189,Flying Monkeys Craft Brewery: Flying Monkeys Acadian Groove Canadian Maple Porter,browns
+190,Flying Monkeys Craft Brewery: Aurora Heart,Specialty Beer
+191,Glutenberg: Glutenberg Red,Gluten-Free Beer
+192,Glutenberg: Glutenberg India Pale Ale,Gluten-Free Beer
+193,Glutenberg: Glutenberg Blonde,Gluten-Free Beer
+194,Glutenberg: Glutenberg American Pale Ale,Gluten-Free Beer
+195,Granville Island Brewing Company: Hefeweizen,wheat
+196,Granville Island Brewing Company: English Bay Pale Ale,pale ale
+197,Granville Island Brewing Company: False Creek Raspberry Ale,lager
+198,Granville Island Brewing Company: Cypress Honey Lager,lager
+199,Granville Island Brewing Company: Island Lager,lager
+200,Great Lakes Brewery: Great Lakes Thrust! An IPA,ipa
+201,Great Lakes Brewery: Great Lakes RoboHop,ipa
+202,Great Lakes Brewery: Great Lakes Apocalypse Later,black ale
+203,Great Lakes Brewery: Canuck Pale Ale,pale ale
+204,Great Lakes Brewery: Citraddiction XPA,pale ale
+205,Great Lakes Brewery: Audrey Hopburn Belgian IPA,belgian
+206,Great Lakes Brewery: Harry Porter & The Bourbon Soaked Vanilla Bean,browns
+207,Great Lakes Brewery: Chill Winston Grisette,belgian
+208,Great Lakes Brewery: Great Lakes Lake Effect,ipa
+209,Great Lakes Brewery: Great Lakes My Bitter Wife IPA,ipa
+210,Great Lakes Brewery: Blonde Lager,lager
+211,Great Lakes Brewery: Devil's Pale Ale 666,pale ale
+212,Great Lakes Brewery: Great Lakes Octopus Wants To Fight IPA,ipa
+213,Great Lakes Brewery: Apocalypse Later Imperial Black IPA,pale ale
+214,Great Lakes Brewery: Ice Hole Pale Ale,pale ale
+215,Great Lakes Brewery: Great Lakes Karma Citra IPA,ipa
+216,Great Lakes Brewery: Great Lakes Harry Porter,browns
+217,Great Lakes Brewery: Great Lakes / Bar Hop Hanlan’s Point,browns
+218,High Park Brewery: Across the Pond,"red, amber"
+219,High Road Brewing: Bronan,ipa
+220,Hop City Brewing Co.: Barking Squirrel Lager,lager
+221,Hop City Brewing Co.: Big Mouth Pale Ale,pale ale
+222,Hop City Brewing Co.: Hopbot IPA,pale ale
+223,Hop City Brewing Co.: 8th Sin Black Lager,lager
+224,Indie Ale House Brewing: Ritual Madness,sour
+225,Indie Ale House Brewing: Cock Puncher,ipa
+226,Isle de Garde Brasserie: Brett Session Saison au Seigle,Brett Beer
+227,Isle de Garde Brasserie: American Pale Ale,pale ale
+228,Isle de Garde Brasserie: English Brown Ale,browns
+229,Junction Craft Brewing: Engineers,pale ale
+230,Kensington Brewing Company: Augusta Ale,pale ale
+231,Kensington Brewing Company: Fruit Stand Watermelon Wheat,lager
+232,Kensington Brewing Company: India Pale Ale,pale ale
+233,Kensington Brewing Company: Baldwin FishEYE PA,pale ale
+234,Labatt Ontario Breweries: Brown Ale,browns
+235,Labatt Ontario Breweries: Canadian Ale,lager
+236,Labatt Ontario Breweries: Canadian Style Wheat Ale - Prohibition Series,lager
+237,Labatt Ontario Breweries: Classic Porter,browns
+238,Labatt Ontario Breweries: Blue Citra,lager
+239,Lagunitas Brewing Company: Dry-Hopped Censored Ale,Specialty Beer
+240,Lagunitas Brewing Company: GnarlyWine,American-Style Barley Wine Ale
+241,Lagunitas Brewing Company: A Little Sumpin' Extra,pale ale
+242,Lagunitas Brewing Company: A Little Sumpin' Sumpin',pale ale
+243,Lagunitas Brewing Company: DayTime IPA,pale ale
+244,Lagunitas Brewing Company: Brown Shugga',pale ale
+245,Lagunitas Brewing Company: Imperial Stout,stout
+246,Lagunitas Brewing Company: Imperial Red Ale,"red, amber"
+247,Lagunitas Brewing Company: Imperial Pils,pilsner
+248,Lake of Bays Brewing Company: Crosswind Pale Ale,pale ale
+249,Le Trou Du Diable: EPIK,stout
+250,Le Trou Du Diable: Bar Volo 25th Anniversary Ale,sour
+251,Le Trou Du Diable: Apocalypso,pale ale
+252,Le Trou Du Diable: Dulcis Succubus - Brassin Special,sour
+253,Left Field Brewery: Left Field Laser Show,ipa
+254,Left Field Brewery: Bricks & Mortar,browns
+255,Left Field Brewery: Greenwood,ipa
+256,Les 3 Brasseurs: Blond,Golden or Blonde Ale
+257,Les 3 Brasseurs: Brown,browns
+258,Les Brasseurs du Temps: Blanche de Koralie,wheat
+259,Les Trois Mousquetaires: Dixième,sour
+260,Les Trois Mousquetaires: Gose,sour
+261,MacKinnon Brothers Brewing: 8 Man,"red, amber"
+262,McAuslan Brewing: Griffon Extra Blonde,Golden or Blonde Ale
+263,McAuslan Brewing: Griffon Brown Ale,browns
+264,McAuslan Brewing: Griffon Ale Rousse,pale ale
+265,MicroBrasserie Charlevoix: Dominus Vobiscum Blanche,wheat
+266,Microbrasserie Le Naufrageur: Carrick,barrelaged
+267,Microbrasserie Le Naufrageur: Colborne,"red, amber"
+268,Microbrasserie Le Prospecteur: Blonde du Prospecteur,Golden or Blonde Ale
+269,Microbrasserie Le Prospecteur: Blanche du Prospecteur,wheat
+270,Mill Street Brewery: IPA (India Pale Ale),pale ale
+271,Mill Street Brewery: Imperial Ginger Cat,wheat
+272,Mill Street Brewery: Don Valley Bench,lager
+273,Mill Street Brewery: Cobblestone Stout,stout
+274,Mill Street Brewery: Grapefruit League India Pale Ale,pale ale
+275,Mill Street Brewery: Belgian Wit,wheat
+276,Mill Street Brewery: Big League IPA,pale ale
+277,Mill Street Brewery: 100th Meridian,lager
+278,Mill Street Brewery: Belgian Pale Ale,belgian
+279,Mill Street Brewery: Hopped & Confused,pale ale
+280,Mill Street Brewery: Coffee Porter,"red, amber"
+281,Molson Breweries of Canada: Full Moon Winter Ale,belgian
+282,Molson Breweries of Canada: Dominion Ale,Specialty Beer
+283,Molson Breweries of Canada: Canadian Light,lager
+284,Molson Breweries of Canada: Caffrey's Irish Ale,"red, amber"
+285,Molson Breweries of Canada: Carling,lager
+286,Muskoka Brewery: Muskoka Twice As Mad Tom IPA,ipa
+287,Muskoka Brewery: Muskoka Harvest Ale,pale ale
+288,Nickel Brook Brewing: Old Kentucky Bastard,imperial st
+289,Nickel Brook Brewing: Wicked Awesome IPA,ipa
+290,Nickel Brook Brewing: Café Del Bastardo,imperial st
+291,Nickel Brook Brewing: Winey Bastard,imperial st
+292,Nickel Brook Brewing: Über - Raspberry,wheat
+293,Nickel Brook Brewing: Cuvée (2016) - Bourbon Barrel-Aged, Co.Herb and Spice Beer 
+294,Nickel Brook Brewing: Immodest,ipa
+295,Nickel Brook Brewing Company: Cause & Effect,Golden or Blonde Ale
+296,Nickel Brook Brewing Company: Head Stock,pale ale
+297,Nickel Brook Brewing Company: Ceres,sour
+298,Nickel Brook Brewing Company: Bolshevik Bastard,imperial st
+299,Railway City Brewing Company: Black Coal Stout,stout
+300,Railway City Brewing Company: Iron Spike - Copper,"red, amber"
+301,Railway City Brewing Company: Iron Spike - Amber,"red, amber"
+302,Railway City Brewing Company: Hoptoberfest,germanic styles
+303,Railway City Brewing Company: Dead Elephant,pale ale
+304,Redline Brewhouse: Double Clutch,ipa
+305,San Francisco Brewing Co.: Broadway IPA,pale ale
+306,Sawdust City Brewing: Twin Pine,ipa
+307,Sleeman Breweries Ltd.: Clear,lager
+308,Sleeman Breweries Ltd.: Honey Brown Lager,"red, amber"
+309,Sleeman Breweries Ltd.: Dark,Specialty Beer
+310,Spearhead Brewing Company: Belgian Style Stout,black ale
+311,The Collingwood Brewery: Downhill Pale Ale,pale ale
+312,The Collingwood Brewery: 3-point Saison,Strong Ale
+313,Unibroue: 1837,belgian
+314,Unibroue: Ephemere Strawberry & Rhubarb,fruit beer
+315,Unibroue: Audaciter,belgian
+316,Unibroue: Éphémère Elderberry,fruit beer
+317,Unibroue: Ephémère Cranberry,fruit beer
+318,Unibroue: Éphémère Cherry,fruit beer
+319,Unibroue: Éphémère Cassis,fruit beer
+320,Unibroue: Éphémère Blueberry,fruit beer
+321,Unibroue: Éphémère Blackcurrant,wheat
+322,Unibroue: Éphémère Apple,wheat
+323,Unibroue: Eau Bénite,belgian
+324,Unibroue: Éphémère Pear,fruit beer
+325,Unibroue: Blonde De L’Enfer,belgian
+326,Unibroue: Ale Gateau Foret-noire,belgian
+327,Unibroue: Blanche de Chambly,wheat
+328,Unibroue: Don De Dieu,belgian
+329,Unibroue: Blonde de Chambly,belgian
+330,Unibroue: À Tout Le Monde,belgian
+331,Unibroue: A Tout Le Monde - Megadeth,belgian
+332,Wellington Brewery: Helles Bock,browns
+333,Wellington Brewery: Iron Duke,Strong Ale
+334,Wellington Brewery: Bewitched Belgian,Strong Ale
+335,À la Fût: Hopfenweisse,wheat
+336,À la Fût: Cuvée Houblonée I,pale ale
+337,À la Fût: À La Belge Triple,belgian
