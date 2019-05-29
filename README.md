@@ -37,7 +37,9 @@ The data for the project was collected via scraping two websites:
         b) Google Spreadsheet: I convinced close friends and co-workers to look at the entire dataset, containing 628 beers         
             and rate those beers they have tried out of 10.
 
-I was left with:  628 Beers (338 beers after deleting beer with no ratings after user feedback)
+I was left with:  
+
+                  628 Beers (338 beers after deleting beer with no ratings after user feedback)
                   
                   86 beer form respondents
                   
