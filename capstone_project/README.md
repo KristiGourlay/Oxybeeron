@@ -87,7 +87,7 @@ For the first model I used the Spotlight Recommender system. This unfortunately,
 
 Model 2: KNN Model (Collaborative)
 
-A KNN model in a non-parametric model that seperates data points into several clusters and then makes inferences for new samples by measuring the distance between the target beer and the closest beers to it. This model relies on user-item ratings.
+A KNN model is a non-parametric model that seperates data points into several clusters and then makes inferences for new samples by measuring the distance between the target beer and the closest beers to it. This model relies on user-item ratings.
 
 
 Model 3: Cosine Similarity Model (Content)
