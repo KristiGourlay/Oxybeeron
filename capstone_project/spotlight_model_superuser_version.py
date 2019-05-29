@@ -164,7 +164,7 @@ def beer_finder(beer):
     return og_df3[og_df3['beer'].str.contains(beer)]['beer'].tolist()
 
 
-#This function uses cosine similarity to find the most similar beers based on style to the target beer
+#This function uses cosine similarity to find the most similar beers to the target beer, based on style
 def return_beers(beer):
 
     title = beer_finder(beer)[0]
@@ -190,8 +190,8 @@ def fetch_favourites(user_id):
     return list(users_favourites)
 
 
-#This function uses the above the KNN and Cosine Similarity functions to find beers similar (both style
-#and user-item interaction) to the beer that the given user score 8 or above
+#This function uses the above KNN and Cosine Similarity functions to find beers similar (both style
+#and user-item interaction) to the beer that the given user scored 8 or above
 def sim_beers(list_of_beer):
     preferences = []
     for beer in list_of_beer:
