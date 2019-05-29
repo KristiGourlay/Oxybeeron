@@ -289,31 +289,26 @@ def final_list_maker(list_of_beers, inputs):
 
     return list(set(final_recommendations))[:9]
 
-templates = ['templates/beers2.html',
-            "templates/beers2A.html",
-            'templates/beers2B.html',
-            'templates/beers2C.html']
-
-
-
+templates = ['beers2.html',
+            "beers2A.html",
+            'beers2B.html',
+            'beers2C.html']
 
 
 app = Flask(__name__)
 
 @app.route('/page')
 def page():
-   with open(np.random.choice(templates), 'r') as page:
-       return page.read()
+    random_template = np.random.choice(templates)
+    return flask.render_template(random_template)
 
 @app.route('/result', methods=['POST', 'GET'])
 def contact():
-
     if flask.request.method == 'POST':
-            inputs = request.form.getlist('check')
-            results = beer_collector(inputs)
-            results = final_list_maker(results, inputs)
+        inputs = request.form.getlist('check')
+        results = beer_collector(inputs)
+        results = final_list_maker(results, inputs)
     return flask.render_template('beer1.html', result = results)
-
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='4000', debug=False)
