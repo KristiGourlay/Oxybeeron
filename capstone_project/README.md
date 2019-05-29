@@ -10,7 +10,7 @@ It's hard to surf the web these days and not come in contact with a recommender 
 
 Three types of Recommender Systems:
 
-1. Content Based. Broadly speaking, this system is based on the premise that if you like one item, you will like another similar item. In terms of beer, if you like Guinness, you will most likely also like stouts, especially with one a creamer.
+1. Content Based. Broadly speaking, this system is based on the premise that if you like one item, you will like another similar item. In terms of beer, if you like Guinness, you will most likely also like stouts, especially one with a creamer.
 
 2. Collaborative Based. This system focuses on the relationship between users and items. Strictly speaking, similar people like similar items. If person A and B, like Corona, Coors Light, and Heineken, and person A loves Sawdust City Little Norway, a Collaborative Based recommender system would recommend Little Norway to person B.
 
