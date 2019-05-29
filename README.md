@@ -1,5 +1,9 @@
 # Oxybeeron
 
+
+<img src='static/images/Ontario-Craft-Beer-Week-1024x530.jpg' alt='beerphoto'>
+
+
 # Motivation
 
 I have been bartending for the last three years at a Craft beer bar. I've come to realise that people have very unique tastes in beer, however, they rarely can name their style preferences passed 'lager' and 'ale'. This recommender system aims to make beer selection easier for beer drinkers. 
