@@ -79,21 +79,26 @@ Web App:
 
 # Models
 
+
 Model 1: Spotlight Recommender Model (Collaborative)
 
 For the first model I used the Spotlight Recommender system. This unfortunately, due to the small dataset, was not able to make accurate recommendations for users. The precision at K was .18 after tuning parameters. The recommendations seemed to be skewed by the data compiling decisions I had made. For none super users, it would only recommend those 20 beers thats were part of the Beer Form.
 
+
 Model 2: KNN Model (Collaborative)
 
-A KNN model in a non-parametric model that seperates data points into several clusters and then makes inferences for new samples by measuring the distance between the target beer and the closest beers to it. This model relies on item-feature similarity.
+A KNN model in a non-parametric model that seperates data points into several clusters and then makes inferences for new samples by measuring the distance between the target beer and the closest beers to it. This model relies on user-item ratings.
+
 
 Model 3: Cosine Similarity Model (Content)
 
 Cosine Similarity measures the similarity between two non-zero vectors. For example, two vectors that share the same orientation have a cosine similarity of 1. This method recommended beer based on similar styles. Due to the relatively small dataset, I personally mapped over 100s styles down to 31. 
 
+
 Model 4: Kristi's Hybrid Model (oxybeeron.py)
 
 My hybrid model (which is connected to the flask app), provides 10 beer recommendations based on the collaboration of the above three models. Anything that is recommended by Model 1 and Model 2 is automatically recommended, and then the final recommendation spots are filled out by Model 3. The flask app, allows the 'online' user to choose from a list of 10 beers, their preferences, and then this model, in turn, recommends beer based on this hybrid model.
+
 
 Model 5: Super-User Model (spotlight_model_superuser_version.py)
 
