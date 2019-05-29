@@ -49,28 +49,32 @@ I was left with:
 # Tools and Packages Used
 
 Stack
-  -Python
-  -Git
+  
+        -Python
+        -Git
   
 Web Scraping
-  -Requests
-  -Beautiful Soup
-  -json
-  -pickle
+        
+        -Requests
+        -Beautiful Soup
+        -json
+        -pickle
   
 Feature Engineering and Modeling
-  -Pandas
-  -Scipy
-  -Numpy
-  -Matplotlib
-  -KNN
-  -Sckit-learn
-  -Spotlight
-  -regex
+        
+        -Pandas
+        -Scipy
+        -Numpy
+        -Matplotlib
+        -KNN
+        -Sckit-learn
+        -Spotlight
+        -regex
   
 Web App:
-  -Flask
-  -HTML
+          
+          -Flask
+          -HTML
 
 
 # Models
