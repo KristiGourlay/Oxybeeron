@@ -23,11 +23,11 @@ My objective when setting out to do this capstone project was to be able to reco
 
 # Data
 
-The data for the project was collected via scraping two websites:
+The data for the project was collected via scraping two websites and creating a user database:
 
 1. BreweryDB. I used an API key to compile over 20,000 beers from BreweryDB's database. I then filtered out beers, to be left with beer from Ontario, Quebec, Macro Breweries, and well-known US Breweries with beer readily available in Toronto.
 
-2. Beer Advocate. To supplement the list of 338 from BreweryDB, I used beautiful soup to scrape the Top 100 favourite beer in Ontario from the Beer Advocate. Luckly there was not much overlap between the two sets.
+2. Beer Advocate. To supplement the list of 338 from BreweryDB, I used beautiful soup to scrape the Top 100 favourite beers in Ontario from the Beer Advocate. Luckly there was not much overlap between the two sets.
 
 3. User database. In order to simulate a user base, I created two Google documents:
         
