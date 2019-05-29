@@ -1,11 +1,11 @@
 # capstone_project
 Oxybeeron
 
-#Motivation
+# Motivation
 
 I have been bartending for the last three years at a Craft beer bar. I've come to realise that people have very unique tastes in beer, however, they rarely can name their style preferences passed 'lager' and 'ale'. This recommender system aims to make beer selection easier for beer drinkers. 
 
-#Recommender Systems
+# Recommender Systems
 
 It's hard to surf the web these days and not come in contact with a recommender system. Amazon, YouTube, and Netflix are just a few of the online services that attempt to make your life  easier (and make a few extra bucks) by suggesting things you may like, based on your explicit feedback, and increasingly more so, on your implicit feedback.
 
@@ -18,11 +18,11 @@ Three types of Recommender Systems:
 3. Hybrid Systems. This system combines Content and Collaborative systems. For example, if person C likes imperial stouts and IPAs. And person D also likes imperial stouts, but hates IPAs, a hybrid system would recommend other imperial stouts that person C liked to person D.
 
 
-#Objective
+# Objective
 
 My objective when setting out to do this capstone project was to be able to recommend beer to users in a hybrid system. I wished to make a system that could tackle the cold start problem (the idea that new users and new beers do not have ratings) but also take into account collaborative and content information to recommend beer to avid users.
 
-#Data
+# Data
 
 The data for the project was collected via scraping two websites:
 
@@ -41,34 +41,34 @@ I was left with:  628 Beers (338 beers after deleting beer with no ratings after
                   15 Google Spreadsheets' super-users
            
            
-#Tools and Packages Used
+# Tools and Packages Used
 
 Stack
-  Python
-  Git
+  -Python
+  -Git
   
 Web Scraping
-  Requests
-  Beautiful Soup
-  json
-  pickle
+  -Requests
+  -Beautiful Soup
+  -json
+  -pickle
   
 Feature Engineering and Modeling
-  Pandas
-  Scipy
-  Numpy
-  Matplotlib
-  KNN
-  Sckit-learn
-  Spotlight
-  regex
+  -Pandas
+  -Scipy
+  -Numpy
+  -Matplotlib
+  -KNN
+  -Sckit-learn
+  -Spotlight
+  -regex
   
 Web App:
-  Flask
-  HTML
+  -Flask
+  -HTML
 
 
-#Models
+# Models
 
 Model 1: Spotlight Recommender Model (Collaborative)
 
@@ -91,7 +91,7 @@ Model 5: Super-User Model (spotlight_model_superuser_version.py)
 This hybrid model is an example of how the collaboration of these three models can be tweaked to conform to different datasets. This model does not work on the entirety of the user base, but for those who filled out the entire Google Spreadsheet (my 'Super Users), this model is effective. This model relies on the top recommendations provided by Spotlight. It then fetches all the beer that a certain user rated as 8 or above and then uses the cosine similarity and KNN model functions to list content similarity and and user-item interaction similarity. The final function (def super_user_recs) takes in a user id number and then recommends the beer that is present in the Spotlight recommendations, and in the combination of the KNN and cosine simiarity recommendations. This model effectively recommends beer based on similar user preferences, but also considers the users preferences for style.
 
 
-#Final Thoughts
+# Final Thoughts
 
 The oxybeeron app was a nice introduction to recommender systems. It relied more heavily on, and was more effective with, the more basic models, like KNN and Cosine Similarity. This was simply because there was not enough data for Spotlight to do its magic. However, the combination of these three models, provided a basic blueprint for a hybrid model that could be quite effective.
 
