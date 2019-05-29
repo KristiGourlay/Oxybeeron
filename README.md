@@ -1,7 +1,7 @@
 # Oxybeeron
 
 
-<img src='static/images/Ontario-Craft-Beer-Week-1024x530.jpg' alt='beerphoto'>
+<img src='capstone_project/static/images/Ontario-Craft-Beer-Week-1024x530.jpg' alt='beerphoto'>
 
 
 # Motivation
