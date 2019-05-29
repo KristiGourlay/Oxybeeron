@@ -32,6 +32,7 @@ df3['beer'] = df3['beer'].str.normalize('NFKD').str.encode('ascii', errors='igno
 
 ############SPOTLIGHT MODEL#####################
 
+
 beer_encoder = LabelEncoder()
 beer_encoder.fit(df['beer'])
 beer = beer_encoder.transform(df['beer'])
@@ -57,11 +58,10 @@ train, test = random_train_test_split(explicit_interactions, random_state=np.ran
 
 
 explicit_model = ExplicitFactorizationModel(loss='regression',
-                                   embedding_dim=128,
-                                   n_iter=100,
-                                   batch_size=1000,
-                                   l2=1,
-                                   learning_rate=1e-3)
+                                   embedding_dim=32,
+                                   n_iter=10,
+                                   batch_size=250,
+                                   learning_rate=0.01)
 
 explicit_model.fit(train)
 
@@ -74,18 +74,17 @@ np.mean(pk)
 
 
 pipe = make_pipeline(ExplicitFactorizationModel(loss='regression',
-                                                       embedding_dim=128,
-                                                       n_iter=100,
-                                                       batch_size=1000,
-                                                       l2=1,
-                                                       learning_rate=1e-3))
+                                   embedding_dim=32,
+                                   n_iter=10,
+                                   batch_size=250,
+                                   learning_rate=0.01))
 
 pipe.fit(train)
 
 ##Testing the spotlight model on my own data
 kristi_preds = pd.DataFrame({
     'beer': beer_encoder.classes_,
-    'value': pipe.predict(user_encoder.transform(['KRISTI'])[0]),
+    'value': explicit_model.predict(user_encoder.transform(['KRISTI'])),
     }).sort_values('value', ascending=True).tail(50)
 
 
@@ -132,6 +131,9 @@ X_norm = X - csr_matrix(X_mean_beer)
 def beer_finder2(beer):
     return df2[df2['beer'].str.contains(beer)]['beer'].tolist()
 
+
+
+
 def find_similar_beers(beer_id, X=X_norm, beer_mapper=beer_mapper, beer_inv_mapper=beer_inv_mapper, k=10, metric='manhattan'):
 
     neighbour_ids = []
@@ -141,7 +143,7 @@ def find_similar_beers(beer_id, X=X_norm, beer_mapper=beer_mapper, beer_inv_mapp
     if isinstance(beer_vec, (np.ndarray)):
         beer_vec = beer_vec.reshape(1,-1)
 
-    kNN = NearestNeighbors(n_neighbors=k+1, algorithm="brute", metric='manhattan')
+    kNN = NearestNeighbors(n_neighbors = k + 1, algorithm="brute", metric='manhattan')
     kNN.fit(X.T)
     neighbour = kNN.kneighbors(beer_vec, return_distance=False)
     for i in range(0,k):
@@ -173,6 +175,8 @@ beer_idx = dict(zip(og_df3['beer'], list(og_df3.index)))
 def beer_finder(beer):
     return og_df3[og_df3['beer'].str.contains(beer)]['beer'].tolist()
 
+
+
 def return_beers(beer):
 
     title = beer_finder(beer)[0]
@@ -188,7 +192,7 @@ def return_beers(beer):
 ##############FUNCTIONS TO TIE ALL THREE TOGETHER###########################
 
 #The following two functions will take the inputs from the flask app and create a new entry in the dataframe,
-#and use the Spotlight model to recommend on those inputs.
+#and user the Spotlight model to recommend on those inputs.
 
 def new_user(inputs):
     new_input = pd.DataFrame([0] * 337).T
@@ -285,10 +289,10 @@ def final_list_maker(list_of_beers, inputs):
 
     return list(set(final_recommendations))[:9]
 
-templates = ['templates/beer2.html',
-            "templates/beer2A.html",
-            'templates/beer2B.html',
-            'templates/beer2C.html']
+templates = ['templates/beers2.html',
+            "templates/beers2A.html",
+            'templates/beers2B.html',
+            'templates/beers2C.html']
 
 
 
@@ -312,4 +316,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port='4000', debug=True)
+    app.run(host='0.0.0.0', port='4000', debug=False)
