@@ -28,8 +28,6 @@ item_ids = np.array(df['beer'])
 ratings = np.array(df['rating']).astype('float32')
 
 
-
-
 #Explicit Factorization Model
 explicit_interactions = Interactions(user_ids, item_ids, ratings)
 explicit_interactions.tocoo().todense().shape
@@ -44,19 +42,13 @@ explicit_model = ExplicitFactorizationModel(loss='regression',
 explicit_model.fit(explicit_interactions)
 
 
-kristi_predictions = pd.DataFrame({
-    'beer': beer_encoder.classes_,
-    'value': explicit_model.predict(user_encoder.transform(['KRISTI'])),
-    }).sort_values('value').tail(20)
-
-# user_id = 51
 user_df = pd.DataFrame(explicit_interactions.tocoo().todense())
 
 
 
 ########SPOTLIGHT RECOMMENDATIONS###########
 
-
+#This function uses the Spotlight model to make recommendations for a given user
 def spotlight_predictions(user_id):
     app_user = pd.DataFrame(user_df.iloc[user_id]).T
     app_user_preds = pd.DataFrame({
@@ -67,6 +59,7 @@ def spotlight_predictions(user_id):
 
     return new_preds_list
 
+#This function creates a list of all the beer that the given user has rated/tried
 def tried(user_id):
     tried_list = df['user'] == user_id
     tried_list = df[tried_list]['beer'].tolist()
@@ -75,6 +68,7 @@ def tried(user_id):
     return list_of_tried_beers
 
 
+#This function finds the Spotlight recommendations that the given user has not tried
 def advanced_recommendations(user_id):
     recommendations = []
     tried_beers = tried(user_id)
@@ -88,12 +82,6 @@ def advanced_recommendations(user_id):
     return recommendations
 
 advanced_recommendations(51)
-
-
-#Testing on my friends
-user_encoder.transform(['LAURA'])
-advanced_recommendations(58)
-
 
 
 
@@ -133,7 +121,7 @@ def beer_finder2(beer):
     return df2[df2['beer'].str.contains(beer)]['beer'].tolist()
 
 
-
+#This function finds the beers closest to the target beer in a KNN model
 def find_similar_beers(beer_id, X=X_norm, beer_mapper=beer_mapper, beer_inv_mapper=beer_inv_mapper, k=10, metric='manhattan'):
 
     neighbour_ids = []
@@ -152,8 +140,6 @@ def find_similar_beers(beer_id, X=X_norm, beer_mapper=beer_mapper, beer_inv_mapp
     neighbour_ids.pop(0)
     return neighbour_ids
 
-
-find_similar_beers('Corona')
 
 
 ######COSINE SIMILARITY RECOMMENDATIONS######
@@ -177,6 +163,8 @@ beer_idx = dict(zip(og_df3['beer'], list(og_df3.index)))
 def beer_finder(beer):
     return og_df3[og_df3['beer'].str.contains(beer)]['beer'].tolist()
 
+
+#This function uses cosine similarity to find the most similar beers based on style to the target beer
 def return_beers(beer):
 
     title = beer_finder(beer)[0]
@@ -192,6 +180,7 @@ def return_beers(beer):
 
 #######FINAL FUNCTIONS########
 
+#This function finds all the beer that the given user rated 8 or higher
 def fetch_favourites(user_id):
     ratings_for_user = df['user'] == user_id
     favourites = df['rating'] >= 8
@@ -201,6 +190,8 @@ def fetch_favourites(user_id):
     return list(users_favourites)
 
 
+#This function uses the above the KNN and Cosine Similarity functions to find beers similar (both style
+#and user-item interaction) to the beer that the given user score 8 or above
 def sim_beers(list_of_beer):
     preferences = []
     for beer in list_of_beer:
@@ -212,6 +203,8 @@ def sim_beers(list_of_beer):
     return preferences
 
 
+#This function combines the above functions to recommend the Spotlight recommendations that are similar to
+#the beers that the given user rated 8 or above
 def super_user_recs(user_id):
     final_recos = []
     list_of_beer = fetch_favourites(user_id)
@@ -224,7 +217,3 @@ def super_user_recs(user_id):
             pass
 
     return final_recos
-
-
-user_encoder.transform(['KRISTI'])
-super_user_recs(51)
