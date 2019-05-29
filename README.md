@@ -1,5 +1,4 @@
-# capstone_project
-Oxybeeron
+# Oxybeeron
 
 # Motivation
 
