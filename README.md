@@ -10,7 +10,7 @@ It's hard to surf the web these days and not come in contact with a recommender 
 
 Three types of Recommender Systems:
 
-1. Content Based. Broadly speaking, this system is based on the premise that if you like one item, you will like another similar item. In terms of beer, if you like Guinness, you will most likely also like stouts, especially with one a creamer.
+1. Content Based. Broadly speaking, this system is based on the premise that if you like one item, you will like another similar item. In terms of beer, if you like Guinness, you will most likely also like stouts, especially one with a creamer.
 
 2. Collaborative Based. This system focuses on the relationship between users and items. Strictly speaking, similar people like similar items. If person A and B, like Corona, Coors Light, and Heineken, and person A loves Sawdust City Little Norway, a Collaborative Based recommender system would recommend Little Norway to person B.
 
@@ -27,7 +27,7 @@ The data for the project was collected via scraping two websites:
 
 1. BreweryDB. I used an API key to compile over 20,000 beers from BreweryDB's database. I then filtered out beers, to be left with beer from Ontario, Quebec, Macro Breweries, and well-known US Breweries with beer readily available in Toronto.
 
-2. Beer Advocate. To supplement the list of 338 from BreweryDB, I used beautiful soup to scrape the Top 100 favourite beer in Ontario from the Beer Advocate. Luckly there was not much overlap between the two sets.
+2. Beer Advocate. To supplement the list of 338 from BreweryDB, I used beautiful soup to scrape the Top 100 favourite beers in Ontario from the Beer Advocate. Luckly there was not much overlap between the two sets.
 
 3. User database. In order to simulate a user base, I created two Google documents:
         
