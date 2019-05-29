@@ -192,7 +192,7 @@ def return_beers(beer):
 ##############FUNCTIONS TO TIE ALL THREE TOGETHER###########################
 
 #The following two functions will take the inputs from the flask app and create a new entry in the dataframe,
-#and user the Spotlight model to recommend on those inputs.
+#and use the Spotlight model to recommend on those inputs.
 
 def new_user(inputs):
     new_input = pd.DataFrame([0] * 337).T
