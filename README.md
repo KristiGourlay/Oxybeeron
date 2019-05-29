@@ -10,7 +10,7 @@ It's hard to surf the web these days and not come in contact with a recommender 
 
 Three types of Recommender Systems:
 
-1. Content Based. Broadly speaking, this system is based on the premise that if you like one item, you will like another similar item. In terms of beer, if you like Guinness, you will most likely also like stouts, especially with a creamer.
+1. Content Based. Broadly speaking, this system is based on the premise that if you like one item, you will like another similar item. In terms of beer, if you like Guinness, you will most likely also like stouts, especially with one a creamer.
 
 2. Collaborative Based. This system focuses on the relationship between users and items. Strictly speaking, similar people like similar items. If person A and B, like Corona, Coors Light, and Heineken, and person A loves Sawdust City Little Norway, a Collaborative Based recommender system would recommend Little Norway to person B.
 
@@ -30,13 +30,17 @@ The data for the project was collected via scraping two websites:
 2. Beer Advocate. To supplement the list of 338 from BreweryDB, I used beautiful soup to scrape the Top 100 favourite beer in Ontario from the Beer Advocate. Luckly there was not much overlap between the two sets.
 
 3. User database. In order to simulate a user base, I created two Google documents:
+        
         a) Beer Form: I created a beer form and disseminated it on Facebook and the Bitmaker Slack channels. Users were asked
             to rate out of 10, 20 beers that I felt were representative of Macro and Micro Breweries, and of various styles.
+        
         b) Google Spreadsheet: I convinced close friends and co-workers to look at the entire dataset, containing 628 beers         
             and rate those beers they have tried out of 10.
 
 I was left with:  628 Beers (338 beers after deleting beer with no ratings after user feedback)
+                  
                   86 beer form respondents
+                  
                   15 Google Spreadsheets' super-users
            
            
