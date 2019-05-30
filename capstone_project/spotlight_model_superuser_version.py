@@ -46,7 +46,7 @@ user_df = pd.DataFrame(explicit_interactions.tocoo().todense())
 
 
 
-########SPOTLIGHT RECOMMENDATIONS###########
+#Spotlight Model
 
 #This function uses the Spotlight model to make recommendations for a given user
 def spotlight_predictions(user_id):
@@ -85,7 +85,7 @@ def advanced_recommendations(user_id):
 
 
 
-#########KNN MODEL RECOMMENDATIONS#######
+#kNN Model
 from scipy.sparse import csr_matrix
 
 def create_X(new_df):
@@ -142,7 +142,7 @@ def find_similar_beers(beer_id, X=X_norm, beer_mapper=beer_mapper, beer_inv_mapp
 
 
 
-######COSINE SIMILARITY RECOMMENDATIONS######
+#Cosine Similarity Model
 
 styles = set(df3['style_name'].unique())
 for s in styles:
@@ -178,7 +178,7 @@ def return_beers(beer):
 
 
 
-#######FINAL FUNCTIONS########
+#Final functions to tie three models together
 
 #This function finds all the beer that the given user rated 8 or higher
 def fetch_favourites(user_id):

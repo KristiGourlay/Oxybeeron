@@ -17,7 +17,7 @@ from scipy.sparse import csr_matrix
 from collections import Counter
 
 
-#############BRING IN DATA########################
+#Bringing in the data
 
 df = pd.read_csv('data/processed_dataframe.csv', index_col=0)
 df2 = df.copy()
@@ -30,8 +30,7 @@ df['beer'] = df['beer'].str.normalize('NFKD').str.encode('ascii', errors='ignore
 df3['beer'] = df3['beer'].str.normalize('NFKD').str.encode('ascii', errors='ignore').str.decode('utf-8')
 
 
-############SPOTLIGHT MODEL#####################
-
+#Spotlight Model
 
 beer_encoder = LabelEncoder()
 beer_encoder.fit(df['beer'])
@@ -44,15 +43,11 @@ user = user_encoder.fit_transform(df['user'])
 df['user'] = user_encoder.transform(df['user'])
 df['beer'] = beer_encoder.transform(df['beer'])
 
-
-
 user_ids = np.array(df['user'])
 item_ids = np.array(df['beer'])
 ratings = np.array(df['rating']).astype('float32')
 
-
 explicit_interactions = Interactions(user_ids, item_ids, ratings)
-
 
 train, test = random_train_test_split(explicit_interactions, random_state=np.random.RandomState(42))
 
@@ -70,7 +65,7 @@ pk, rk = evaluation.precision_recall_score(explicit_model, test, train=None, k=1
 np.mean(pk)
 
 
-#####################PIPELINE AND TESTING##########################
+#Placing the Spotlight Model in a pipeline
 
 
 pipe = make_pipeline(ExplicitFactorizationModel(loss='regression',
@@ -81,19 +76,12 @@ pipe = make_pipeline(ExplicitFactorizationModel(loss='regression',
 
 pipe.fit(train)
 
-##Testing the spotlight model on my own data
-kristi_preds = pd.DataFrame({
-    'beer': beer_encoder.classes_,
-    'value': explicit_model.predict(user_encoder.transform(['KRISTI'])),
-    }).sort_values('value', ascending=True).tail(50)
-
-
 
 user_df = pd.DataFrame(explicit_interactions.tocoo().todense())
 
 
 
-####################KNN MODEL##########################
+#kNN Model
 #This section was largely repurposed from the Bitmaker Recommender System class. However, it needed to be fixed
 #to fit my data as opposed to the movielens dataset.
 
@@ -154,8 +142,7 @@ def find_similar_beers(beer_id, X=X_norm, beer_mapper=beer_mapper, beer_inv_mapp
     return neighbour_ids
 
 
-###################COSINE SIMILARITY MODEL#######################
-
+#Cosine Similarity Model
 
 styles = set(df3['style_name'].unique())
 for s in styles:
@@ -169,13 +156,10 @@ df3 = df3.drop(columns=['beer', 'style_name'])
 #Calculating the Cosine Similarity
 cosine_sim = cosine_similarity(df3, df3)
 
-
-
 beer_idx = dict(zip(og_df3['beer'], list(og_df3.index))) #indexing the beers
 
 def beer_finder(beer):
     return og_df3[og_df3['beer'].str.contains(beer)]['beer'].tolist()
-
 
 
 def return_beers(beer):
@@ -190,7 +174,7 @@ def return_beers(beer):
     return og_df3['beer'].iloc[similar_beers].tolist()
 
 
-##############FUNCTIONS TO TIE ALL THREE TOGETHER###########################
+##Functions to tie all three models together
 
 #The following two functions will take the inputs from the flask app and create a new entry in the dataframe,
 #and use the Spotlight model to recommend on those inputs.
