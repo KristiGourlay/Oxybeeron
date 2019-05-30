@@ -31,7 +31,7 @@ The data for the project was collected via scraping two websites:
 
 1. BreweryDB. I used an API key to compile over 20,000 beers from BreweryDB's database. I then filtered out beers, to be left with beer from Ontario, Quebec, Macro Breweries, and well-known US Breweries with beer readily available in Toronto.
 
-2. Beer Advocate. To supplement the list of beers from BreweryDB, I used beautiful soup to scrape the Top 100 favourite beers in Ontario from the Beer Advocate. Luckly there was not much overlap between the two sets.
+2. Beer Advocate. To supplement the list of beers from BreweryDB, I used beautiful soup to scrape the Top 100 favourite beers in Ontario from the Beer Advocate. Luckily there was not much overlap between the two sets.
 
 3. User database. In order to simulate a user base, I created two Google documents:
         
@@ -91,7 +91,7 @@ For the first model I used the Spotlight Recommender system. This unfortunately,
 
 Model 2: KNN Model (Collaborative)
 
-A KNN model in a non-parametric model that seperates data points into several clusters and then makes inferences for new samples by measuring the distance between the target beer and the closest beers to it. This model relies on user-item ratings.
+A KNN model is a non-parametric model that seperates data points into several clusters and then makes inferences for new samples by measuring the distance between the target beer and the closest beers to it. This model relies on user-item ratings.
 
 
 Model 3: Cosine Similarity Model (Content)
@@ -106,7 +106,7 @@ My hybrid model (which is connected to the flask app), provides 10 beer recommen
 
 Model 5: Super-User Model (spotlight_model_superuser_version.py)
 
-This hybrid model is an example of how the collaboration of these three models can be tweaked to conform to different datasets. This model does not work on the entirety of the user base, but for those who filled out the entire Google Spreadsheet (my 'Super Users), this model is effective. This model relies on the top recommendations provided by Spotlight. It then fetches all the beer that a certain user rated as 8 or above and then uses the cosine similarity and KNN model functions to list content similarity and and user-item interaction similarity. The final function (def super_user_recs) takes in a user id number and then recommends the beer that is present in the Spotlight recommendations, and in the combination of the KNN and cosine simiarity recommendations. This model effectively recommends beer based on similar user preferences, but also considers the users preferences for style.
+This hybrid model is an example of how the collaboration of these three models can be tweaked to conform to different datasets. This model does not work on the entirety of the user base, but for those who filled out the entire Google Spreadsheet (my 'Super Users), this model is effective. This model relies on the top recommendations provided by Spotlight. It then fetches all the beer that a certain user rated as 8 or above and then uses the cosine similarity and KNN model functions to list content similarity and user-item interaction similarity. The final function (def super_user_recs) takes in a user id number and then recommends the beer that is present in the Spotlight recommendations, and in the combination of the KNN and cosine similarity recommendations. This model effectively recommends beer based on similar user preferences, but also considers the users preferences for style.
 
 
 # Final Thoughts
