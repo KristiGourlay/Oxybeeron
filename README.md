@@ -6,7 +6,7 @@
 
 # Motivation
 
-I have been bartending for the last three years at a craft beer bar. During this time, I've come to realise that people have very unique tastes in beer, however, they rarely can name their style preferences, beyond 'lager' and 'ale'. In addition, there are abundance of high quality craft beers in Ontario (and Canada for that matter), and if domestic beer drinkers knew which craft beers were similar to their Stellas and their Boneshakers, they could more easily explore the developing craft beer world. This recommender system aims to make beer selection easier for these beer drinkers, and further assist beer drinkers, like me, who are looking for their next big beer obsession. 
+I have been bartending for the last three years at a craft beer bar. During this time, I've come to realise that people have very unique tastes in beer, however, they rarely can name their style preferences, beyond 'lager' and 'ale'. In addition, there is an abundance of high quality craft beers in Ontario (and Canada for that matter), and if domestic beer drinkers knew which craft beers were similar to their Stellas and their Boneshakers, they could more easily explore the developing craft beer world. This recommender system aims to make beer selection easier for these beer drinkers, and further assist beer drinkers, like me, who are looking for their next big beer obsession. 
 
 # Recommender Systems
 
