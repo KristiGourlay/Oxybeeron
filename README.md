@@ -10,7 +10,7 @@ I have been bartending for the last three years at a craft beer bar. During this
 
 # Recommender Systems
 
-It's hard to surf the web these days and not come in contact with a recommender system. Amazon, YouTube, and Netflix are just a few of the online services that attempt to make your life  easier (and make a few extra bucks in the process) by suggesting things you may like, based on your explicit feedback, and increasingly more so, on your implicit feedback.
+It's hard to surf the web these days and not come into contact with a recommender system. Amazon, YouTube, and Netflix are just a few of the online services that attempt to make your life  easier (and make a few extra bucks in the process) by suggesting things you may like, based on your explicit feedback, and increasingly more so, on your implicit feedback.
 
 Three types of Recommender Systems:
 
@@ -106,7 +106,7 @@ My hybrid model (which is connected to the flask app), provides 10 beer recommen
 
 Model 5: Super-User Model (spotlight_model_superuser_version.py)
 
-This hybrid model is an example of how the collaboration of these three models can be tweaked to conform to different datasets. This model does not work on the entirety of the user base, but for those who filled out the entire Google Spreadsheet (my 'Super Users), this model is effective. This model relies on the top recommendations provided by Spotlight. It then fetches all the beer that a certain user rated as 8 or above and then uses the cosine similarity and KNN model functions to list content similarity and user-item interaction similarity. The final function (def super_user_recs) takes in a user id number and then recommends the beer that is present in the Spotlight recommendations, and in the combination of the KNN and cosine similarity recommendations. This model effectively recommends beer based on similar user preferences, but also considers the users preferences for style.
+This hybrid model is an example of how the collaboration of these three models can be tweaked to conform to different datasets. This model does not work on the entirety of the user base, but for those who filled out the entire Google Spreadsheet (my 'Super Users), this model is effective. This model relies on the top recommendations provided by Spotlight. It then fetches all the beer that a certain user rated as 8 or above and then uses the cosine similarity and KNN model functions to list content similarity and user-item interaction similarity. The final function (def super_user_recs) takes in a user id number and then recommends the beers that are present in the Spotlight recommendations, and in the combination of the KNN and cosine similarity recommendations. This model effectively recommends beer based on similar user preferences, but also considers the users preferences for style.
 
 
 # Final Thoughts
@@ -115,4 +115,4 @@ The oxybeeron app was a nice introduction to recommender systems. It relied more
 
 The effectiveness of the Cosine Similarity Model with only 31 beer styles, makes me optimistic about its potential in a larger dataset where the number of beer styles could be more expansive. For example, instead of "IPAs", it could include specific IPAs (Double IPAs, Session IPAs, Vermont-Style IPAs, Black IPAs, hazy IPAs, etc.) 
 
-Overall, it became painfully obvious that it's hard to find information and examples online for recommender systems that are not based on the movielens dataset. I think that for Spotlight to work to the best of its ability, my dataset would need to be much larger than 101 users and 338 beers. However, the improvement in its ability to recommend beer for my super users is promising. Model 5 shows that in the interim between a cold start situation and a 100K+ dataset (aka MovieLens), Spotlight can be quite effective if it is combined with other recommendation algorythms. Using these three models, in tandem, resulted in the ability to make solid recommendations for users in a smaller network.
+Overall, it became painfully obvious that it's hard to find information and examples online for recommender systems that are not based on the movielens dataset. I think that for Spotlight to work to the best of its ability, my dataset would need to be much larger than 101 users and 338 beers. However, the improvement in its ability to recommend beer for my super users is promising. Model 5 shows that in the interim between a cold start situation and a 100K+ dataset (aka MovieLens), Spotlight can be quite effective if it is combined with other recommendation algorithms. Using these three models, in tandem, resulted in the ability to make solid recommendations for users in a smaller network.
