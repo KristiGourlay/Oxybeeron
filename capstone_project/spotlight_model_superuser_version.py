@@ -81,7 +81,7 @@ def advanced_recommendations(user_id):
 
     return recommendations
 
-advanced_recommendations(51)
+
 
 
 

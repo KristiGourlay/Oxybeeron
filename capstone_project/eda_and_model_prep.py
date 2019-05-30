@@ -53,14 +53,14 @@ beer_stats = beer_stats.sort_values(by='bayesian_avg', ascending=False)
 
 
 top_five_beers = beer_stats.head(5)
-#top_five_beers: High Road Bronan and Cloud Piercer, Bellwoods Jelly King and Jelly King Pink Guava, and Ommegang Pale Sour
+top_five_beers
 
 #These beers have the highest Bayesian average. Although this is clearly a bias from the fact that 12 of
 #the 15 people who rated the entire beer list work at Trinity Common. I've only ever seen
 #Cloud Piercer on tap at TC, and Bronan is very rare in Toronto (and exists at TC as a permanent tap).
 
 lowest_ranking_beers = beer_stats.tail(5)
-#lowest_ranking_beers: Labatt Brown Ale and Canadian Ale, Molson Carling, Sleeman Clear, and Ace Hill Pilsner
+lowest_ranking_beers
 #Probably a bias of the unusually high hipster quotient.
 
 

@@ -1,9 +1,8 @@
 import json
 import pickle
 import pandas as pd
-
-# beers = pickle.load(open('new_beer.pkl', 'rb'))  Bring in the pickled data
-
+# beers = pickle.load(open('new_beer.pkl', 'rb'))
+beers = pickle.load(open('brewskis23.pkl', 'rb'))
 num_posts = len(beers)
 
 new_beer_dict = []
