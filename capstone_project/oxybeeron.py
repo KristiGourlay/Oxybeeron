@@ -15,7 +15,7 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.pipeline import Pipeline, make_pipeline
 from scipy.sparse import csr_matrix
 from collections import Counter
-import pprint
+
 
 #############BRING IN DATA########################
 
@@ -99,6 +99,7 @@ user_df = pd.DataFrame(explicit_interactions.tocoo().todense())
 
 from scipy.sparse import csr_matrix
 
+#function converts the dataframe into a sparse matrix
 def create_X(new_df):
 
     M = new_df['user'].nunique()
@@ -119,7 +120,7 @@ def create_X(new_df):
 
 X, user_mapper, beer_mapper, user_inv_mapper, beer_inv_mapper = create_X(df2)
 
-#Normalize the beer data.
+#Normalize the beer data to deal with user-item bias
 n_ratings_per_beer = X.getnnz(axis=0)
 sum_ratings_per_beer = X.sum(axis=0)
 mean_rating_per_beer = sum_ratings_per_beer/n_ratings_per_beer
@@ -138,18 +139,18 @@ def find_similar_beers(beer_id, X=X_norm, beer_mapper=beer_mapper, beer_inv_mapp
 
     neighbour_ids = []
     title = beer_finder2(beer_id)[0]
-    beer_ind = beer_mapper[title]
-    beer_vec = X.T[beer_ind]
+    beer_ind = beer_mapper[title] #finding index number of beer
+    beer_vec = X.T[beer_ind] #vector of beer chosen
     if isinstance(beer_vec, (np.ndarray)):
         beer_vec = beer_vec.reshape(1,-1)
 
     kNN = NearestNeighbors(n_neighbors = k + 1, algorithm="brute", metric='manhattan')
-    kNN.fit(X.T)
-    neighbour = kNN.kneighbors(beer_vec, return_distance=False)
+    kNN.fit(X.T) #fitting our knn model with the X matrix
+    neighbour = kNN.kneighbors(beer_vec, return_distance=False) #finding nearest neighbours to chosen beer
     for i in range(0,k):
         n = neighbour.item(i)
-        neighbour_ids.append(beer_inv_mapper[n])
-    neighbour_ids.pop(0)
+        neighbour_ids.append(beer_inv_mapper[n]) #creating the list with actual beer names
+    neighbour_ids.pop(0) #removes the first element(the chosen beer)
     return neighbour_ids
 
 
@@ -170,7 +171,7 @@ cosine_sim = cosine_similarity(df3, df3)
 
 
 
-beer_idx = dict(zip(og_df3['beer'], list(og_df3.index)))
+beer_idx = dict(zip(og_df3['beer'], list(og_df3.index))) #indexing the beers
 
 def beer_finder(beer):
     return og_df3[og_df3['beer'].str.contains(beer)]['beer'].tolist()
@@ -181,11 +182,11 @@ def return_beers(beer):
 
     title = beer_finder(beer)[0]
     n_recommendations = 10
-    idx = beer_idx[title]
-    sim_scores = list(enumerate(cosine_sim[idx]))
-    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-    sim_scores = sim_scores[1:(n_recommendations+1)]
-    similar_beers = [i[0] for i in sim_scores]
+    idx = beer_idx[title] #getting index number of beer
+    sim_scores = list(enumerate(cosine_sim[idx])) #cosine similarity of each beer to given beer
+    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True) #sorting beers by cos sim
+    sim_scores = sim_scores[1:(n_recommendations+1)] #finding recommendations
+    similar_beers = [i[0] for i in sim_scores] #getting the index number for recommended beers
     return og_df3['beer'].iloc[similar_beers].tolist()
 
 
