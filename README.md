@@ -86,7 +86,7 @@ Web App:
 
 Model 1: Spotlight Recommender Model (Collaborative)
 
-For the first model I used the Spotlight Recommender system. The precision at K was .18 after tuning parameters. The recommendations seemed to be skewed by the data compiling decisions I had made. For none super users, it would only recommend those 20 beers thats were part of the Beer Form.
+For the first model I used the Spotlight Recommender system. The precision at K was .18 after tuning parameters. The recommendations seemed to be skewed by the data compiling decisions I had made. For none super users, it was prone to recommending those 20 beers thats were part of the Beer Form.
 
 
 Model 2: KNN Model (Collaborative)
