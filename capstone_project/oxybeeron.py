@@ -8,6 +8,7 @@ from flask import Flask, request, render_template
 from spotlight.interactions import Interactions
 from spotlight.factorization.explicit import ExplicitFactorizationModel
 from spotlight.cross_validation import random_train_test_split
+from spotlight import evaluation
 from sklearn.preprocessing import LabelEncoder
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.model_selection import train_test_split
@@ -17,7 +18,6 @@ from scipy.sparse import csr_matrix
 from collections import Counter
 
 
-#Bringing in the data
 
 df = pd.read_csv('data/processed_dataframe.csv', index_col=0)
 df2 = df.copy()
@@ -60,12 +60,10 @@ explicit_model = ExplicitFactorizationModel(loss='regression',
 
 explicit_model.fit(train)
 
-from spotlight import evaluation
 pk, rk = evaluation.precision_recall_score(explicit_model, test, train=None, k=10)
 np.mean(pk)
 
 
-#Placing the Spotlight Model in a pipeline
 
 
 pipe = make_pipeline(ExplicitFactorizationModel(loss='regression',
@@ -76,20 +74,19 @@ pipe = make_pipeline(ExplicitFactorizationModel(loss='regression',
 
 pipe.fit(train)
 
-
 user_df = pd.DataFrame(explicit_interactions.tocoo().todense())
 
 
 
-#kNN Model
-#This section was largely repurposed from the Bitmaker Recommender System class. However, it needed to be fixed
-#to fit my data as opposed to the movielens dataset.
+#KNN Model
 
-from scipy.sparse import csr_matrix
-
-#function converts the dataframe into a sparse matrix
 def create_X(new_df):
-
+  
+    '''
+    Input: dataframe
+    Output: sparse matrix
+    '''
+    
     M = new_df['user'].nunique()
     N = new_df['beer'].nunique()
 
@@ -108,6 +105,7 @@ def create_X(new_df):
 
 X, user_mapper, beer_mapper, user_inv_mapper, beer_inv_mapper = create_X(df2)
 
+
 #Normalize the beer data to deal with user-item bias
 n_ratings_per_beer = X.getnnz(axis=0)
 sum_ratings_per_beer = X.sum(axis=0)
@@ -121,10 +119,11 @@ def beer_finder2(beer):
     return df2[df2['beer'].str.contains(beer)]['beer'].tolist()
 
 
-
-
 def find_similar_beers(beer_id, X=X_norm, beer_mapper=beer_mapper, beer_inv_mapper=beer_inv_mapper, k=10, metric='manhattan'):
-
+    '''
+    Input: beer_id
+    Output: k nearest neighbour ids
+    '''
     neighbour_ids = []
     title = beer_finder2(beer_id)[0]
     beer_ind = beer_mapper[title] #finding index number of beer
@@ -163,7 +162,10 @@ def beer_finder(beer):
 
 
 def return_beers(beer):
-
+    '''
+    Input: beer name
+    Output: list of most similar beers
+    '''
     title = beer_finder(beer)[0]
     n_recommendations = 10
     idx = beer_idx[title] #getting index number of beer
@@ -174,12 +176,14 @@ def return_beers(beer):
     return og_df3['beer'].iloc[similar_beers].tolist()
 
 
-##Functions to tie all three models together
-
-#The following two functions will take the inputs from the flask app and create a new entry in the dataframe,
-#and use the Spotlight model to recommend on those inputs.
+  
+#Functions to tie all three models together
 
 def new_user(inputs):
+    '''
+    Input: input from flask app
+    Output: dataframe with new entry of flask user
+    '''
     new_input = pd.DataFrame([0] * 337).T
     for i in inputs:
         if i == 'Corona':
@@ -223,6 +227,10 @@ def new_user(inputs):
 
 
 def get_recos(inputs):
+    '''
+    Input: input from flask app
+    Output: predictions based on Spotlight model
+    '''
     df4 = new_user(inputs)
     app_user = pd.DataFrame(df4.iloc[-1]).T
     app_user_preds = pd.DataFrame({
@@ -234,11 +242,13 @@ def get_recos(inputs):
 
 
 
-#This function uses the above functions to create two lists of recommendations. The first list 'list of beers'
-#collects the recommendations from both the KNN model and the Spotlight model (which recommend based on
-#user vectors). The second list 'list of similar beers' are the beers recommended by the cosine
-#similarity model (based on content similarity).
+
+
 def beer_collector(beer_choices):
+    '''
+    Input: input from flask app
+    Output: Two lists of recommendations. One from KNN model and Spotlight model. One from content similarity.
+    '''
     list_of_beers = []
     list_of_similar_beers = []
     df4 = user_df.append(new_user(beer_choices))
@@ -254,10 +264,11 @@ def beer_collector(beer_choices):
     return list_of_beers, list_of_similar_beers
 
 
-
-#This final function takes the two lists created by the previous function to make the final list of
-#recommendations.
 def final_list_maker(list_of_beers, inputs):
+    '''
+    Input: Two lists created by beer_collector function
+    Output: Final list of recommendations.
+    '''
     final_recommendations = []
     list1 = list_of_beers[0]
     list2 = list_of_beers[1]
