@@ -84,7 +84,7 @@ def create_X(new_df):
   
     '''
     Input: dataframe
-    Output: sparse matrix
+    Output: sparse matrix and both beer and user mappers
     '''
     
     M = new_df['user'].nunique()
